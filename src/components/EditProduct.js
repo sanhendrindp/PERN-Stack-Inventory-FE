@@ -25,6 +25,10 @@ const EditProduct = ({ product }) => {
         className="btn btn-warning"
         data-bs-toggle="modal"
         data-bs-target={`#id${product._id}`}
+        onClick={() => {
+          setName(product.name);
+          setPrice(product.price);
+        }}
       >
         Edit
       </button>
