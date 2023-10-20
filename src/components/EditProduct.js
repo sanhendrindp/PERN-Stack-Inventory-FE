@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./style.css";
 
 const EditProduct = ({ product }) => {
   const [name, setName] = useState(product.name);
@@ -46,15 +47,21 @@ const EditProduct = ({ product }) => {
             </div>
 
             <div className="modal-body">
+              <label htmlFor="productName" className="mb-1">
+                Product
+              </label>
               <input
                 type="text"
                 className="form-control"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
+              <label htmlFor="productPrice" className="mt-3 mb-1">
+                Price
+              </label>
               <input
                 type="text"
-                className="form-control mt-3"
+                className="form-control"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
               />
